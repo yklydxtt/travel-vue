@@ -3,12 +3,12 @@
     <div class="header">
       <div class="headerline">
         <template v-for="(item,index) in list">
-          <a class="headerlink"  :key="item.title" :class="index>4?'img-sm':null">
+          <router-link to="ticket" class="headerlink"  :key="item.title" :class="index>4?'img-sm':null">
             <div class="headerimg">
               <img :src="item.src" />
             </div>
             <div class="headertitle">{{item.title}}</div>
-          </a>
+          </router-link>
         </template>
       </div>
     </div>
@@ -29,6 +29,7 @@ export default {
       width: 20%;
       text-align: center;
       margin: 0.07rem 0 0.7rem;
+      text-decoration: none;
       .headerimg {
         width: 70%;
         height: 0;
