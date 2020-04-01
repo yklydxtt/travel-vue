@@ -15,19 +15,9 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
 export default {
   name: 'HomeHeader',
-  data: function () {
-    return {
-      list: []
-    }
-  },
-  mounted: function () {
-    axios.get('https://www.fastmock.site/mock/f533d8ffdf3d124f3adae55f3cf30660/api/api/getHeader').then((data) => {
-      this.list = data.data.data || []
-    })
-  }
+  props:["list"]
 }
 </script>
 <style scoped lang="less">
